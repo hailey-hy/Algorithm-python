@@ -1,15 +1,15 @@
-X=int(input()) #3
+X = int(input()) 
 
-line=1
-while X>line: #3>1
-    X-=line #X=2
-    line+=1 #line=2
+line = 1 
+while X > line: 
+    X -= line 
+    line += 1 
     
-if line%2==0:
-    a=X #a=2
-    b=line-X+1 #b=1
+if line % 2 == 0:
+    a = X 
+    b = line - X + 1
 else:
-    a=line-X+1
-    b=X
+    a = line - X + 1
+    b = X
     
 print(a, '/', b, sep='')
