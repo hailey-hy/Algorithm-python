@@ -12,3 +12,4 @@ for i in range(1, n + 1):
             break
         array.append(d[i - j])
     d[i] = min(array) + 1
+print(d[n])
