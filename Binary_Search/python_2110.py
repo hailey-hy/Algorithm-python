@@ -1,10 +1,12 @@
 # 공유기 설치
 
-n, c = map(int, input().split())
+import sys
+
+n, c = map(int, sys.stdin.readline().split())
 houses = []
 
 for _ in range(n):
-    houses.append(int(input()))
+    houses.append(int(sys.stdin.readline()))
 
 houses.sort()
 
