@@ -4,7 +4,7 @@ n = int(input())
 
 maze = list(map(int, input().split()))
 
-dp = [n] * (n + 1) #점프한 횟수를 저장
+dp = [n + 1] * n #점프한 횟수를 저장
 
 dp[0] = 0
 
