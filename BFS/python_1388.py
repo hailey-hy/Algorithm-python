@@ -10,10 +10,10 @@ def bfs(a, b):
             room[x][y] = '1'
             if y + 1 < m and room[x][y + 1] == '-':
                 deq.append((x, y + 1))
-            elif room[x][y] == '|':
-                room[x][y] = '1'
-                if x + 1 < n and room[x + 1][y] == '|':
-                    deq.append((x + 1, y))
+        elif room[x][y] == '|':
+            room[x][y] = '1'
+            if x + 1 < n and room[x + 1][y] == '|':
+                deq.append((x + 1, y))
 
 n, m = map(int, input().split())
 room = [list(input()) for _ in range(n)]
