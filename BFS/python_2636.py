@@ -13,7 +13,7 @@ leftover = []
 
 def bfs(a, b):
     q = deque([(a, b)])
-    visited = [[False] * n for _ in range(n)]
+    visited = [[False] * m for _ in range(n)]
     visited[a][b] = True
     state = 0
     while q:
