@@ -1,13 +1,18 @@
 # 창영이와 커피
 
-n, k = map(int, input().split())
-coffees = list(map(int, input().split()))
+import sys
 
-dp = [[0] * (k + 1) for _ in range(n + 1)]
+n, k = map(int, sys.stdin.readline().split())
+coffees = list(map(int, sys.stdin.readline().split()))
 
-for i in range(1, n  + 1):
-    for j in range(1, k + 1):
-        if j >= coffees[i - 1]:
-            dp[i][j] = min(dp[i - 1][j], dp[i - 1][j - 1] + coffees[i - 1])
-        else:
-            dp[i][j] = dp[i - 1][j]
+dp = [0] + [sys.maxsize] * k
+
+for coffee in coffees:
+    dp_max = dp.copy()
+    for i in range(coffee, k + 1):
+        dp[i] = min(dp[i], dp_max[i - coffee] + 1)
+
+if dp[k] >= sys.maxsize:
+    print(-1)
+else:
+    print(dp[k])
