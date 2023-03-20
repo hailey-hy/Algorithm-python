@@ -3,7 +3,7 @@
 import heapq
 import sys
 
-n = int(sys.stdin.readline().rstrip())
+n = int(input())
 
 graph = []
 for _ in range(n):
